@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Tooltip from '../Tooltip/Tooltip'
+
 export default function Home() {
   return (
    <>
@@ -9,12 +10,14 @@ export default function Home() {
       <p className="text-lg text-center mb-8">
         Get started by creating your first todo item!
       </p>
-      <Link
+    <Tooltip text='Dashboard'>
+    <Link
         to="/dashboard"
         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded"
       >
         Go to Dashboard
       </Link>
+    </Tooltip>
   
      
      

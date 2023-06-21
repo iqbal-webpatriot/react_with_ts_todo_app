@@ -8,6 +8,7 @@ type TooltipProps = {
 
 const Tooltip = ( {text,children}:TooltipProps ) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+ 
   const handleMouseEnter = () => {
     setIsTooltipVisible(true);
   };
@@ -34,8 +35,10 @@ const Tooltip = ( {text,children}:TooltipProps ) => {
     </div>
 
     {isTooltipVisible && (
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded mt-2">
+      <div 
+      className="  absolute top-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded mt-2">
         {text}
+        <div className="tooltip-arrow" />
       </div>
     )}
   </div>

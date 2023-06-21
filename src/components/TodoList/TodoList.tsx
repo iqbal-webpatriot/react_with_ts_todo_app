@@ -104,6 +104,7 @@ export default function TodoList({ allTodos }: TodoListProps) {
             return (
               <div
                 key={todo.id}
+                id={todo.id}
                 className={` sm:w-full md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto rounded-t-lg border mb-1 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800 transition-all duration-300 ${
                   isAccordionOpen ? "" : "overflow-hidden"
                 }`}
@@ -162,7 +163,7 @@ export default function TodoList({ allTodos }: TodoListProps) {
                   aria-labelledby={`heading${todo.id}`}
                   data-te-parent="#accordionExample"
                 >
-                  <div className="px-5 py-4 grid place-items-start gap-y-5">
+                  <div className="px-5 py-4 grid place-items-start gap-y-5  ">
                     <ul className=" w-full  ">
                       {/* //!Subtask mapping */}
                       {todo.subTasks &&
