@@ -5,6 +5,7 @@ import Login from '../components/Auth/Login'
 import ProtectedRoutes from './ProtectedRoutes'
 import Dashboard from '../components/Dashboard/Dashboard'
 import UserProfile from '../components/User/MyProfile'
+import { Post } from '../components/Post/Post'
 export default function AllRoutes() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function AllRoutes() {
         <Route path='/login' element={<Login/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
          <Route path ='/myprofile' element={<UserProfile/>} />
+         <Route path='/post' element={<Post/>}  />
         {/* //! protected routes for authenticated users only  */}
         <Route element={<ProtectedRoutes/>}>
         
