@@ -20,6 +20,7 @@ const getSelect = (tab: Tab) => {
           onChange={(value) => console.info(value)}
           values={books}
           formatLabel={(value) => value.title}
+           isMulti={false}
         />
       );
     case "Movies":
@@ -28,6 +29,7 @@ const getSelect = (tab: Tab) => {
           onChange={(value) => console.info(value)}
           values={movies}
           formatLabel={(value) => value.title}
+          isMulti={false}
         />
       );
     case "Laptops":
@@ -36,6 +38,7 @@ const getSelect = (tab: Tab) => {
           onChange={(value) => console.info(value)}
           values={laptops}
           formatLabel={(value) => value.model}
+          isMulti={false}
         />
       );
       default:
@@ -57,6 +60,7 @@ export const TabsComponent = () => {
       <GenericSelect<Tab>
         onChange={(value) => setTab(value)}
         values={tabs}
+        isMulti={false}
         formatLabel={(value) => value}
       />
      </div>

@@ -38,6 +38,7 @@ export const Post = () => {
           onChange={(value) => {
             console.log(value);
           }}
+          isMulti={false}
           formatLabel={(value) => value.title}
         />
          </div>
