@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useRef, useEffect } from "react";
 import { GenericSelect } from "../GenericSelect/GenericSelect";
+import { TabsComponent } from "../GenericSelect/TabExample";
 // All post type definition
 export type AllPost = {
   id: number;
@@ -24,9 +25,25 @@ export const Post = () => {
 
   return (
     <>
-    <div className="container mx-auto my-32">
- <GenericSelect values={[{id:'1',title:'title'},{id:'2',title:'title2'},{id:'3',title:'title3'}]} onChange={(value)=>{console.log(value)}}/>
-    </div>
+      <div className="container mx-auto my-32 flex justify-between ">
+        {/* simple select example using generic select component */}
+         <div>
+         <label>Simple Select : </label> <br />
+        <GenericSelect
+          values={[
+            { id: "1", title: "title" },
+            { id: "2", title: "title2" },
+            { id: "3", title: "title3" },
+          ]}
+          onChange={(value) => {
+            console.log(value);
+          }}
+          formatLabel={(value) => value.title}
+        />
+         </div>
+{/* // a little complex select example using generic select component */}
+<TabsComponent/>
+      </div>
       <div className="container mx-auto p-2 my-32 ">
         {
           // best way to render dynamic api response data when type is unknown
